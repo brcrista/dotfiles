@@ -1,3 +1,5 @@
+printf "bash $BASH_VERSION\n"
+
 # Add the current directory to PATH
 PATH=${PATH}:.
 export PATH
