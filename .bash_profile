@@ -4,6 +4,9 @@ printf "bash $BASH_VERSION\n"
 PATH=${PATH}:.
 export PATH
 
+# Enable globstar
+shopt -s globstar
+
 # pip settings
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
