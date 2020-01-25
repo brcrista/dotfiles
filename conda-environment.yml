@@ -1,0 +1,12 @@
+# Packages to install in the base environment for conda
+# conda install --file conda-environment.yml
+beautifulsoup4
+hypothesis
+ipython
+jupyterlab
+matplotlib
+numpy
+pandas
+pytest
+python-dateutil
+requests
