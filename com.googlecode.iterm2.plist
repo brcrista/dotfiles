@@ -58,12 +58,26 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf702-0x220000</key>
+		<dict>
+			<key>Action</key>
+			<integer>47</integer>
+			<key>Text</key>
+			<string>0</string>
+		</dict>
 		<key>0xf702-0x280000</key>
 		<dict>
 			<key>Action</key>
 			<integer>11</integer>
 			<key>Text</key>
 			<string>0x1b 0x62</string>
+		</dict>
+		<key>0xf702-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>47</integer>
+			<key>Text</key>
+			<string>1</string>
 		</dict>
 		<key>0xf702-0x300000</key>
 		<dict>
@@ -75,9 +89,16 @@
 		<key>0xf702-0x320000</key>
 		<dict>
 			<key>Action</key>
-			<integer>33</integer>
+			<integer>47</integer>
 			<key>Text</key>
-			<string></string>
+			<string>2</string>
+		</dict>
+		<key>0xf703-0x220000</key>
+		<dict>
+			<key>Action</key>
+			<integer>46</integer>
+			<key>Text</key>
+			<string>0</string>
 		</dict>
 		<key>0xf703-0x280000</key>
 		<dict>
@@ -85,6 +106,13 @@
 			<integer>11</integer>
 			<key>Text</key>
 			<string>0x1b 0x66</string>
+		</dict>
+		<key>0xf703-0x2a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>46</integer>
+			<key>Text</key>
+			<string>1</string>
 		</dict>
 		<key>0xf703-0x300000</key>
 		<dict>
@@ -96,9 +124,9 @@
 		<key>0xf703-0x320000</key>
 		<dict>
 			<key>Action</key>
-			<integer>34</integer>
+			<integer>46</integer>
 			<key>Text</key>
-			<string></string>
+			<string>2</string>
 		</dict>
 		<key>0xf729-0x100000</key>
 		<dict>
@@ -579,13 +607,6 @@
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x42</string>
 				</dict>
-				<key>0xf702-0x220000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2D</string>
-				</dict>
 				<key>0xf702-0x240000</key>
 				<dict>
 					<key>Action</key>
@@ -599,13 +620,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;6D</string>
-				</dict>
-				<key>0xf703-0x220000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2C</string>
 				</dict>
 				<key>0xf703-0x240000</key>
 				<dict>
@@ -2270,7 +2284,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-09T19:30:06Z</date>
+	<date>2020-04-13T13:00:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
