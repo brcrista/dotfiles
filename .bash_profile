@@ -18,4 +18,4 @@ gpip3() {
 # Set prompt
 PS1="$ "
 
-alias ls="ls -G" # enable colorized output
+export CLICOLOR=1 # enable colorized output
