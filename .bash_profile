@@ -19,4 +19,3 @@ gpip3() {
 PS1="$ "
 
 alias ls="ls -G" # enable colorized output
-alias clip=pbcopy # can never remember this one
