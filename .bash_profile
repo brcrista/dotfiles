@@ -1,11 +1,24 @@
 printf "bash $BASH_VERSION\n"
 
 # Add the current directory to PATH
-PATH=${PATH}:.
-export PATH
+# PATH=${PATH}:.
 
-# Enable globstar
+# Set prompt
+PS1="$ "
+
+export CLICOLOR=1 # enable colorized output for `ls`
+
+# Enable shell options
 shopt -s globstar
+shopt -s cdspell
+
+# Aliases
+alias ll="ls -lah"
+alias gits="git status"
+
+mcd() {
+    mkdir -p $1 && cd $_
+}
 
 # pip settings
 export PIP_REQUIRE_VIRTUALENV=true
@@ -15,7 +28,7 @@ gpip3() {
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
-# Set prompt
-PS1="$ "
+# Put application-specific configuration here
 
-export CLICOLOR=1 # enable colorized output
+# Finally, export PATH
+export PATH
