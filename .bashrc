@@ -3,7 +3,8 @@ printf "bash $BASH_VERSION\n"
 # Set prompt
 PS1="$ "
 
-export CLICOLOR=1 # enable colorized output for `ls`
+# Enable colorized output for `ls`
+export CLICOLOR=1
 
 # Enable shell options
 shopt -s globstar
