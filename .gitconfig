@@ -8,3 +8,5 @@
 [grep]
 	lineNumber = true
 	extendedRegexp = true
+[color]
+	ui = auto
