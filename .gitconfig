@@ -1,0 +1,10 @@
+[user]
+	name = Brian Cristante
+	email = brian.cristante@gmail.com
+[github]
+	user = brcrista
+[push]
+	default = simple
+[grep]
+	lineNumber = true
+	extendedRegexp = true
