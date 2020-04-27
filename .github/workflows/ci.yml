@@ -8,9 +8,6 @@ jobs:
       matrix:
         runner: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.runner }}
-    defaults:
-      run:
-        working-directory: dotfiles
 
     steps:
     - uses: actions/checkout@v2
