@@ -3,7 +3,6 @@
 # Install command-line tools for macOS using Homebrew.
 
 brew update
-brew upgrade
 
 # Install GNU versions of Unix tools (and some missing ones)
 brew install coreutils
