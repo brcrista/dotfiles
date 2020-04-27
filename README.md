@@ -9,4 +9,10 @@ This is my repository of configuration files.
 ./install.sh
 ```
 
+Then, if on macOS, run:
+
+```sh
+./macos.sh
+```
+
 Files that are not platform-agnostic must be copied manually.

@@ -13,7 +13,9 @@ set -o vi
 
 # Aliases
 alias e="echo"
-alias ll="ls -lah"
+# TODO Temporary workaround until I figure out how to get colors to work for GNU `ls`
+#alias ll="ls -lah"
+alias ll="/bin/ls -lah"
 
 alias up="cd .."
 alias up1="up"
