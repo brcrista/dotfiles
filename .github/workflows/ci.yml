@@ -14,13 +14,15 @@ jobs:
 
     # I don't know how to bypass the prompt that will show up in `macos.sh`,
     # so just run `brew.sh` directly.
-    - if: ${{ runner.os == 'macos' }} 
+    - name: Install Homebrew packages
+      if: ${{ runner.os == 'macos' }}
       run: |
-        # Without this, `brew.sh` will fail on preinstalled Node.js
+        # Without this, `brew.sh` will fail on the Node.js preinstalled in the virtual environment
         brew unlink node@12
         ./brew.sh
 
-    - run: ./install.sh
+    - name: Install dotfiles
+      run: ./install.sh
 
     - name: Test Bash startup
       run: |
