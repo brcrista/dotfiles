@@ -11,6 +11,7 @@ brew install gnu-sed
 brew install bash
 brew install autoconf
 brew install automake
+brew install shellcheck
 
 coreutils_path="/usr/local/opt/coreutils/libexec/gnubin"
 PATH="$coreutils_path:$PATH"
