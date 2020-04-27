@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install command-line tools for macOS using Homebrew.
+set -e
 
 brew update
 
