@@ -1,5 +1,7 @@
 # dotfiles
 
+![CI](https://github.com/brcrista/dotfiles/workflows/CI/badge.svg)
+
 This is my repository of configuration files.
 
 ## Installation
