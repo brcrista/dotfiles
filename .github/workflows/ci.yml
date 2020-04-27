@@ -15,7 +15,10 @@ jobs:
     # I don't know how to bypass the prompt that will show up in `macos.sh`,
     # so just run `brew.sh` directly.
     - if: ${{ runner.os == 'macos' }} 
-      run: ./brew.sh
+      run: |
+        # Without this, `brew.sh` will fail on preinstalled Node.js
+        brew unlink node@12
+        ./brew.sh
 
     - run: ./install.sh
 
