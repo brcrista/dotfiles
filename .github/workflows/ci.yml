@@ -8,9 +8,17 @@ jobs:
       matrix:
         runner: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        working-directory: dotfiles
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: DEBUG
+      run: |
+        pwd
+        ls
 
     # I don't know how to bypass the prompt that will show up in `macos.sh`,
     # so just run `brew.sh` directly.
