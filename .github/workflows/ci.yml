@@ -1,0 +1,22 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # I don't know how to bypass the prompt that will show up in `macos.sh`,
+    # so just run `brew.sh` directly.
+    - if: ${{ runner.os == 'macos' }} 
+      run: brew.sh
+
+    - run: install.sh
+
+    - name: Test Bash startup
+      run: |
+        source ~/.bash_profile
+        source ~/.bashrc
