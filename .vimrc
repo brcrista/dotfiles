@@ -4,3 +4,6 @@
 :set nocompatible
 
 :syntax on
+
+:set cursorline
+:hi CursorLine cterm=None ctermbg=gray ctermfg=white
