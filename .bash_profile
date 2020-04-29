@@ -5,7 +5,11 @@ then
     PATH="$homebrew_coreutils_path:$PATH"
 fi
 
-# Put application-specific configuration here
+# Put application-specific configuration in .bash_profile.plugins
+if [ -f .bash_profile.plugins ]
+then
+    source .bash_profile.plugins
+fi
 
 # Finally, export PATH
 export PATH
