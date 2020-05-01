@@ -3,9 +3,6 @@ printf "bash $BASH_VERSION\n"
 # Set prompt
 PS1="$ "
 
-# Enable colorized output for `ls`
-export CLICOLOR=1
-
 # Enable shell options
 shopt -s globstar
 shopt -s cdspell
@@ -13,9 +10,8 @@ set -o vi
 
 # Aliases
 alias e="echo"
-# TODO Temporary workaround until I figure out how to get colors to work for GNU `ls`
-#alias ll="ls -lah"
-alias ll="/bin/ls -lah"
+alias ll="ls -lAh --color"
+alias ls="ls --color"
 
 alias up="cd .."
 alias up1="up"
