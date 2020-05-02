@@ -17,4 +17,4 @@ Then, if on macOS, run:
 ./macos.sh
 ```
 
-Files that are not platform-agnostic must be copied manually.
+Note that the files for VS Code and iTerm2 must be copied manually.
