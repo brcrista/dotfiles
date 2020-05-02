@@ -20,7 +20,6 @@ pushd $coreutils_path && ln -s ln -s ../../bin/gsed sed && popd
 # TODO How can I route `man sed` to `man gsed`?
 
 # Install scripting languages
-brew cask install miniconda
 brew install node
 
 # Install other shell programs
