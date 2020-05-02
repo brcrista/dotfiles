@@ -19,7 +19,7 @@ jobs:
       run: |
         # Without this, `brew.sh` will fail on the Node.js preinstalled in the virtual environment
         brew unlink node@12
-        ./brew.sh
+        ./macos.sh
 
     - name: Install dotfiles
       run: ./install.sh
