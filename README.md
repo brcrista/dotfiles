@@ -1,6 +1,6 @@
 # dotfiles
 
-![CI](https://github.com/brcrista/dotfiles/workflows/CI/badge.svg)
+[![CI](https://github.com/brcrista/dotfiles/workflows/CI/badge.svg)](https://github.com/brcrista/dotfiles/actions?query=workflow%3ACI)
 
 This is my repository of configuration files.
 
