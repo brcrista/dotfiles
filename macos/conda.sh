@@ -14,7 +14,7 @@ rm "$install_script"
 # Install Anaconda packages
 PATH="$conda_prefix/condabin:$PATH"
 conda install python --yes
-conda install --file conda-environment.yml --yes
+conda install --file anaconda-packages.txt --yes
 
 # Add conda and packages to PATH
 echo "PATH=$conda_prefix/bin:$conda_prefix/condabin:\$PATH" >> ~/.bash_profile.plugins
