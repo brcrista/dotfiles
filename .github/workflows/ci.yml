@@ -3,18 +3,23 @@ name: CI
 on: push
 
 jobs:
-  build:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run shellcheck
+        run: .ci/shellcheck.sh
+
+  install:
     strategy:
       matrix:
         runner: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.runner }}
-
     steps:
     - uses: actions/checkout@v2
 
-    # I don't know how to bypass the prompt that will show up in `macos.sh`,
-    # so just run `brew.sh` directly.
-    - name: Install Homebrew packages
+    - name: Run macOS setup
       if: ${{ runner.os == 'macos' }}
       run: |
         # Without this, `brew.sh` will fail on the Node.js preinstalled in the virtual environment
