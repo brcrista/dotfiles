@@ -17,4 +17,12 @@ conda install python --yes
 conda install --file anaconda-packages.txt --yes
 
 # Add conda and packages to PATH
-echo "PATH=$conda_prefix/bin:$conda_prefix/condabin:\$PATH" >> ~/.bash_profile.plugins
+conda init
+conda config --set auto_activate_base false
+
+# I don't want the base environment activated by default,
+# so add the `bin` directory to PATH.
+# Note that activating a conda environment does more than just set PATH.
+# Packages can run scripts on environment activation as well.
+# But for the things I install globally, it shouldn't really matter.
+echo "PATH=\"$conda_prefix/bin:\$PATH\"" >> ~/.bash_profile.plugins
