@@ -6,7 +6,6 @@ PS1="$ "
 # Enable shell options
 shopt -s globstar
 shopt -s cdspell
-set -o vi
 
 # Aliases
 alias e="echo"
