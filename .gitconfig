@@ -1,6 +1,5 @@
 [user]
 	name = Brian Cristante
-	email = fake@email.com
 [github]
 	user = brcrista
 [push]
@@ -10,3 +9,5 @@
 	extendedRegexp = true
 [color]
 	ui = auto
+[core]
+	editor = vim
