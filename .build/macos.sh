@@ -5,7 +5,7 @@ set -e
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install packages from Homebrew
-bash macos/brew.sh
+macos/brew.sh
 
 # Set up Miniconda
-bash macos/conda.sh
+macos/conda.sh

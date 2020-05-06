@@ -16,7 +16,7 @@ brew install shellcheck
 
 coreutils_path="/usr/local/opt/coreutils/libexec/gnubin"
 PATH="$coreutils_path:$PATH"
-pushd $coreutils_path && ln -s ln -s ../../bin/gsed sed && popd
+pushd $coreutils_path && ln -s ../../bin/gsed sed && popd
 # TODO How can I route `man sed` to `man gsed`?
 
 # Install scripting languages
