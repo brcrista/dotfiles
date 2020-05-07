@@ -1,5 +1,5 @@
 # Packages to install in the base environment for conda
-# conda install --file conda-environment.yml
+# conda install --file anaconda-packages.txt
 beautifulsoup4
 hypothesis
 ipython
