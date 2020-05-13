@@ -1,8 +1,15 @@
 # macOS: from `brew install coreutils`
-homebrew_coreutils_path="/usr/local/opt/coreutils/libexec/gnubin"
-if [ -d $homebrew_coreutils_path ]
+
+homebrew_coreutils_path="$(brew --prefix)/opt/coreutils/libexec/gnubin"
+if [ -d "$homebrew_coreutils_path" ]
 then
     PATH="$homebrew_coreutils_path:$PATH"
+fi
+
+homebrew_gsed_path="$(brew --prefix)/opt/gnu-sed/libexec/gnubin"
+if [ -d "$homebrew_gsed_path" ]
+then
+    PATH="$homebrew_gsed_path:$PATH"
 fi
 
 # Put application-specific configuration in .bash_profile.plugins
