@@ -3,13 +3,13 @@ name: CI
 on: push
 
 jobs:
-  shellcheck:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run shellcheck
-        run: make check
+      - name: lint 
+        run: make lint
 
   linux:
     runs-on: ubuntu-latest 

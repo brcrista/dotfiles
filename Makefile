@@ -1,13 +1,16 @@
 .PHONY: all
-all: check install
+all: install check
 
-.PHONY: check
-check:
+.PHONY: lint
+lint:
 	./.build/shellcheck.sh
 
 .PHONY: install
 install:
 	./.build/install.sh
+
+.PHONY: check
+check:
 
 .PHONY: brew-cli
 brew-cli:
