@@ -11,23 +11,29 @@ jobs:
       - name: Run shellcheck
         run: make check
 
-  install:
-    strategy:
-      matrix:
-        runner: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.runner }}
+  linux:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dotfiles
+      run: make install
+
+    - name: Test Bash startup
+      run: |
+        source ~/.bash_profile
+        source ~/.bashrc
+
+  macos:
+    runs-on: macos-latest 
     steps:
     - uses: actions/checkout@v2
 
     - name: Run macOS setup
-      if: ${{ runner.os == 'macos' }}
       run: |
         # Without this, `brew.sh` will fail on the Node.js preinstalled in the virtual environment
         brew unlink node@12
-        make macos
-
-    - name: Install dotfiles
-      run: make install
+        make bootstrap-macos 
 
     - name: Test Bash startup
       run: |

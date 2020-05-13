@@ -11,10 +11,10 @@ This is my repository of configuration files.
 make install
 ```
 
-Then, if on macOS, run:
+Or, if on macOS, run:
 
 ```sh
-make macos
+make bootstrap-macos
 ```
 
 Note that the files for VS Code and iTerm2 must be copied manually.
