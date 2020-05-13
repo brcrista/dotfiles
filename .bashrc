@@ -35,3 +35,9 @@ mcd() {
 
 # pip settings
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+# Put installation-specific configuration in .bashrc.plugins
+if [ -f .bashrc.plugins ]
+then
+    source .bashrc.plugins
+fi
