@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Do a full installation, from scratch
 set -e
 scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
 
@@ -13,11 +12,3 @@ do
     # so pass -f to overwrite
     ln -sf "$repo_root/$file" "$HOME"
 done
-
-if [[ $(uname) == 'Darwin' ]]
-then
-    make brew-cli
-    make brew
-    make npm
-    make conda
-fi
