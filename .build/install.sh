@@ -9,6 +9,8 @@ repo_root=$(dirname "$scriptdir")
 # shellcheck disable=SC2013
 for file in $(cat "$scriptdir/dotfiles.txt")
 do
+    # Some systems will have, say, a `.bash_profile` by default,
+    # so pass -f to overwrite
     ln -sf "$repo_root/$file" "$HOME"
 done
 
