@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-set -e
+#!/usr/bin/env sh
 
-# Run `shellcheck` on all .sh files in the current filesystem subtree.
-find . -name "*.sh" -exec shellcheck {} +
+# Find all files with an `sh` or `bash` shebang line
+grep -rl "^#\!/usr/bin/env [bash|sh]" . | xargs shellcheck

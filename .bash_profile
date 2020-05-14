@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+#
+# The shebang line isn't necessary since this isn't executable,
+# but it makes it convenient for running shellcheck.
+# See also `make lint`.
+
 # macOS: from `brew install coreutils`
 homebrew_coreutils_path="$(brew --prefix)/opt/coreutils/libexec/gnubin"
 if [ -d "$homebrew_coreutils_path" ]
@@ -15,6 +21,7 @@ fi
 # Put installation-specific configuration in .bash_profile.plugins
 if [ -f .bash_profile.plugins ]
 then
+    # shellcheck disable=SC1091
     source .bash_profile.plugins
 fi
 

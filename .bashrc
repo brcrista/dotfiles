@@ -1,4 +1,10 @@
-printf "bash $BASH_VERSION\n"
+#!/usr/bin/env bash
+#
+# The shebang line isn't necessary since this isn't executable,
+# but it makes it convenient for running shellcheck.
+# See also `make lint`.
+
+echo "bash $BASH_VERSION"
 
 # Set prompt
 PS1="$ "
@@ -29,7 +35,7 @@ alias gitl="git log --graph"
 alias gits="git status"
 
 mcd() {
-    mkdir -p $1 && cd $_
+    mkdir -p "$1" && (cd "$_" || return)
     pwd
 }
 
@@ -39,5 +45,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # Put installation-specific configuration in .bashrc.plugins
 if [ -f .bashrc.plugins ]
 then
+    # shellcheck disable=SC1091
     source .bashrc.plugins
 fi
