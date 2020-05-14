@@ -31,6 +31,3 @@ npm:
 .PHONY: conda
 conda:
 	macos/conda.sh
-
-.PHONY: bootstrap-macos
-bootstrap-macos: install brew-cli brew npm conda
