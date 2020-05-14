@@ -11,8 +11,8 @@ install:
 
 .PHONY: installcheck
 installcheck:
-	source ~/.bash_profile
-	source ~/.bashrc
+	bash ~/.bash_profile
+	bash ~/.bashrc
 
 .PHONY: brew-cli
 brew-cli:
