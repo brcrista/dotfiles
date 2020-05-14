@@ -3,16 +3,20 @@ all: install installcheck
 
 .PHONY: lint
 lint:
-	./.build/shellcheck.sh
+	.build/shellcheck.sh
 
 .PHONY: install
 install:
-	./.build/install.sh
+	.build/install.sh
 
 .PHONY: installcheck
 installcheck:
 	bash ~/.bash_profile
 	bash ~/.bashrc
+
+.PHONY: uninstall
+uninstall:
+	.build/uninstall.sh
 
 .PHONY: brew-cli
 brew-cli:
