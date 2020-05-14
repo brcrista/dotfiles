@@ -15,27 +15,22 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Install dotfiles
-      run: make install
-
-    - name: Test Bash startup
-      run: |
-        source ~/.bash_profile
-        source ~/.bashrc
+    - run: make install
+    - run: make installcheck
 
   macos:
     runs-on: macos-latest 
     steps:
     - uses: actions/checkout@v2
+    - run: make install
 
-    - name: Run macOS setup
+    # The macOS environment should already have `brew` installed
+    - name: make brew 
       run: |
-        # Without this, `brew.sh` will fail on the Node.js preinstalled in the virtual environment
+        # Without this, `brew bundle` will fail on the Node.js preinstalled in the virtual environment
         brew unlink node@12
-        make bootstrap-macos 
+        make brew
 
-    - name: Test Bash startup
-      run: |
-        source ~/.bash_profile
-        source ~/.bashrc
+    - run: make npm
+    - run: make conda
+    - run: make installcheck

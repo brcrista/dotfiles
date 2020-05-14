@@ -1,5 +1,5 @@
 .PHONY: all
-all: install check
+all: install installcheck
 
 .PHONY: lint
 lint:
@@ -9,8 +9,10 @@ lint:
 install:
 	./.build/install.sh
 
-.PHONY: check
-check:
+.PHONY: installcheck
+installcheck:
+	source ~/.bash_profile
+	source ~/.bashrc
 
 .PHONY: brew-cli
 brew-cli:
