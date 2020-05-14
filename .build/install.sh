@@ -9,7 +9,7 @@ repo_root=$(dirname "$scriptdir")
 # shellcheck disable=SC2013
 for file in $(cat "$scriptdir/dotfiles.txt")
 do
-    ln -s "$repo_root/$file" "$HOME"
+    ln -sf "$repo_root/$file" "$HOME"
 done
 
 if [[ $(uname) == 'Darwin' ]]
