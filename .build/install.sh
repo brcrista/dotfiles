@@ -3,11 +3,13 @@
 set -e
 scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
 
+repo_root=$(dirname "$scriptdir")
+
 # Disable shellcheck warning for reading words instead of lines
 # shellcheck disable=SC2013
 for file in $(cat "$scriptdir/dotfiles.txt")
 do
-    ln -s "$(realpath "$file")" "$HOME"
+    ln -s "$repo_root/$file" "$HOME"
 done
 
 if [[ $(uname) == 'Darwin' ]]
