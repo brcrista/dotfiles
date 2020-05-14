@@ -3,11 +3,11 @@ all: install installcheck
 
 .PHONY: lint
 lint:
-	.build/shellcheck.sh
+	.build/shellcheck
 
 .PHONY: install
 install:
-	.build/install.sh
+	.build/install
 
 .PHONY: installcheck
 installcheck:
@@ -16,7 +16,7 @@ installcheck:
 
 .PHONY: uninstall
 uninstall:
-	.build/uninstall.sh
+	.build/uninstall
 
 .PHONY: brew-cli
 brew-cli:
@@ -34,4 +34,4 @@ npm:
 
 .PHONY: conda
 conda:
-	macos/conda.sh
+	macos/install-conda

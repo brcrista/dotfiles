@@ -8,7 +8,7 @@ This is my repository of configuration files.
 
 ```sh
 # This should work on any Linux or macOS system.
-./bootstrap.sh
+./bootstrap
 ```
 
 Note that the files for VS Code and iTerm2 must be copied manually.
