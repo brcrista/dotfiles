@@ -4,18 +4,21 @@
 # but it makes it convenient for running shellcheck.
 # See also `make lint`.
 
-# macOS: from `brew install coreutils`
-homebrew_coreutils_path="$(brew --prefix)/opt/coreutils/libexec/gnubin"
-if [ -d "$homebrew_coreutils_path" ]
+if [ $(which brew) ]
 then
-    PATH="$homebrew_coreutils_path:$PATH"
-fi
+    # macOS: from `brew install coreutils`
+    homebrew_coreutils_path="$(brew --prefix)/opt/coreutils/libexec/gnubin"
+    if [ -d "$homebrew_coreutils_path" ]
+    then
+        PATH="$homebrew_coreutils_path:$PATH"
+    fi
 
-# macOS: from `brew install gnu-sed`
-homebrew_gsed_path="$(brew --prefix)/opt/gnu-sed/libexec/gnubin"
-if [ -d "$homebrew_gsed_path" ]
-then
-    PATH="$homebrew_gsed_path:$PATH"
+    # macOS: from `brew install gnu-sed`
+    homebrew_gsed_path="$(brew --prefix)/opt/gnu-sed/libexec/gnubin"
+    if [ -d "$homebrew_gsed_path" ]
+    then
+        PATH="$homebrew_gsed_path:$PATH"
+    fi
 fi
 
 # Put installation-specific configuration in .bash_profile.plugins
