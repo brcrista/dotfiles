@@ -35,7 +35,8 @@ alias gitl="git log --graph"
 alias gits="git status"
 
 mcd() {
-    mkdir -p "$1" && (cd "$_" || return)
+    mkdir -p "$1"
+    cd "$_" || return
     pwd
 }
 
