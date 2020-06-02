@@ -8,3 +8,5 @@ for file in $(cat "$scriptdir/dotfiles.txt")
 do
     rm -f "$HOME/$file"
 done
+
+rm -rf "$HOME/.bin-override"

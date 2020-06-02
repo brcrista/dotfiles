@@ -12,3 +12,11 @@ do
     # so pass -f to overwrite
     ln -sf "$repo_root/$file" "$HOME"
 done
+
+mkdir "$HOME/.bin-override"
+
+# Pandoc installed with Homebrew will get shadowed by Miniconda's version of it
+if [ -f "/usr/local/bin/pandoc" ]
+then
+    ln -s /usr/local/bin/pandoc "$HOME/.bin-override/pandoc"
+fi

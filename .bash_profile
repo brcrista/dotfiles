@@ -28,6 +28,12 @@ then
     source .bash_profile.plugins
 fi
 
+# Miniconda, for example, will put things in its `bin` directory that shadow things in `/usr/local/bin`
+if [ -d "$HOME/.bin-override" ]
+then
+    PATH="$HOME/.bin-override:$PATH"
+fi
+
 # Finally, export PATH
 export PATH
 
