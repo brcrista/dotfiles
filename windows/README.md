@@ -14,7 +14,6 @@ That way, I know I'm getting the latest version and which options I'm getting.
 - [PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 Install to `C:\bin`:
-- [curl](https://curl.haxx.se/windows/)
 - [jq](https://stedolan.github.io/jq/download/)
 - [SQLite](https://www.sqlite.org/download.html)
 - [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
@@ -58,3 +57,7 @@ I refrain from putting these in my PATH by default because 1) I don't want to cl
 But, this is a good solution if you need to run a Bash script or Makefile.
 
 GNU Make doesn't come with MinGW, so that's why I install it with Chocolatey above.
+
+### curl
+
+As of version 1803, Windows comes with `curl` in `C:\Windows\System32\curl.exe`.
