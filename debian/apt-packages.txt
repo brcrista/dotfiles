@@ -1,0 +1,10 @@
+git
+jq
+make
+man-db
+nodejs
+npm
+shellcheck
+sqlite3
+tree
+vim
