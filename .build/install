@@ -15,9 +15,9 @@ done
 
 # The `.bin-override` directory is for putting things first in PATH.
 bin_override="$HOME/.bin-override"
-if [ ! -d $bin_override ]
+if [ ! -d "$bin_override" ]
 then
-    mkdir $bin_override
+    mkdir "$bin_override"
 fi
 
 # SQLite installed with Homebrew will get shadowed by Miniconda's version of it.
