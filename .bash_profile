@@ -28,7 +28,8 @@ then
     source .bash_profile.plugins
 fi
 
-# Miniconda, for example, will put things in its `bin` directory that shadow things in `/usr/local/bin`
+# Miniconda, for example, will put things in its `bin` directory that shadow things
+# in `usr/bin` and `/usr/local/bin`.
 if [ -d "$HOME/.bin-override" ]
 then
     PATH="$HOME/.bin-override:$PATH"

@@ -4,19 +4,32 @@ scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
 
 repo_root=$(dirname "$scriptdir")
 
-# Disable shellcheck warning for reading words instead of lines
+# Disable shellcheck warning for reading words instead of lines.
 # shellcheck disable=SC2013
 for file in $(cat "$scriptdir/dotfiles.txt")
 do
     # Some systems will have, say, a `.bash_profile` by default,
-    # so pass -f to overwrite
+    # so pass -f to overwrite.
     ln -sf "$repo_root/$file" "$HOME"
 done
 
-mkdir "$HOME/.bin-override"
+# The `.bin-override` directory is for putting things first in PATH.
+bin_override="$HOME/.bin-override"
+if [ ! -d $bin_override ]
+then
+    mkdir $bin_override
+fi
 
-# Pandoc installed with Homebrew will get shadowed by Miniconda's version of it
+# SQLite installed with Homebrew will get shadowed by Miniconda's version of it.
+if [ -f "/usr/bin/sqlite3" ]
+then
+    ln -sf /usr/bin/sqlite3 "$bin_override/sqlite3"
+    # Symlink sqlite -> sqlite3 for convenience
+    ln -sf /"$bin_override/sqlite3" "$bin_override/sqlite"
+fi
+
+# Pandoc installed with Homebrew will get shadowed by Miniconda's version of it.
 if [ -f "/usr/local/bin/pandoc" ]
 then
-    ln -s /usr/local/bin/pandoc "$HOME/.bin-override/pandoc"
+    ln -sf /usr/local/bin/pandoc "$bin_override/pandoc"
 fi
