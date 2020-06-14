@@ -1,3 +1,4 @@
+curl
 git
 jq
 make
@@ -8,3 +9,4 @@ shellcheck
 sqlite3
 tree
 vim
+wget
