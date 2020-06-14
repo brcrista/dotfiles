@@ -29,7 +29,9 @@
         {
             // Put settings here that you want to apply to all profiles.
             "cursorShape": "filledBox",
-            "colorScheme": "Tango Dark"
+            "colorScheme": "One Half Dark",
+            "fontFace": "Consolas",
+            "fontSize": 14
         },
         "list":
         [
