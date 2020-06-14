@@ -17,9 +17,8 @@ else
 fi
 
 if [ "$color_prompt" = "yes" ]; then
-    #foreground_green="\[\033[32m\]"
-    foreground_green="\[\033[01;32m\]"
-    reset="\[\033[0m\]"
+    foreground_green="\\[\\033[01;32m\\]"
+    reset="\\[\\033[0m\\]"
     PS1="$foreground_green\$$reset "
 else
     PS1="\$ "

@@ -4,5 +4,5 @@ scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
 packages=$(cat "$scriptdir/apt-packages.txt")
 
 for package in $packages; do
-    apt-get install --yes $package
+    apt-get install --yes "$package"
 done
