@@ -7,7 +7,8 @@
 echo "bash $BASH_VERSION"
 
 # Set prompt
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null
+then
     # We have color support; assume it's compliant with Ecma-48 (ISO/IEC-6429).
     # Lack of such support is extremely rare, and such a case
     # would tend to support setf rather than setaf.
@@ -16,7 +17,8 @@ else
     color_prompt=
 fi
 
-if [ "$color_prompt" = "yes" ]; then
+if [ "$color_prompt" = "yes" ]
+then
     foreground_green="\\[\\033[01;32m\\]"
     reset="\\[\\033[0m\\]"
     PS1="$foreground_green\$$reset "
