@@ -83,9 +83,13 @@
         // To learn more about selection, visit https://aka.ms/terminal-selection
         { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
         { "command": "paste", "keys": "ctrl+v" },
-
         { "command": "find", "keys": "ctrl+f" },
 
+        // Tabs
+        { "command": "newTab", "keys": "ctrl+t" },
+        { "command": "closeTab", "keys": "ctrl+w" },
+
+        // Panes
         // Press Alt+Shift+D to open a new pane.
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
