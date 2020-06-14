@@ -12,6 +12,7 @@ That way, I know I'm getting the latest version and which options I'm getting.
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - [Node.js](https://nodejs.org/en/download/)
 - [PowerShell](https://github.com/PowerShell/PowerShell/releases)
+    - [PowerShell setup](../pwsh/)
 
 Install to `C:\bin`:
 - [jq](https://stedolan.github.io/jq/download/)
@@ -37,6 +38,13 @@ Note that you have to run as admin to install Chocolatey packages.
 choco install make
 ```
 
+## WSL
+See https://docs.microsoft.com/en-us/windows/wsl/install-win10.
+
+## Windows Store
+- Windows Terminal
+- Debian
+
 ## Notes
 
 ### Bash and Unix tools
@@ -58,6 +66,7 @@ But, this is a good solution if you need to run a Bash script or Makefile.
 
 GNU Make doesn't come with MinGW, so that's why I install it with Chocolatey above.
 
-### curl
+### Pre-installed tools
 
-As of version 1803, Windows comes with `curl` in `C:\Windows\System32\curl.exe`.
+- As of version 1803, Windows comes with `curl` at `C:\Windows\System32\curl.exe`.
+- As of version 1809, Windows comes with `ssh` at `C:\Windows\System32\OpenSSH\ssh.exe`.
