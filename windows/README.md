@@ -1,4 +1,4 @@
-# Windows setup
+# Windows Setup
 
 Automating my Windows setup would be hard because there's no package manager I can rely on.
 Most things I want to install aren't available through Chocolatey.
@@ -44,6 +44,8 @@ See https://docs.microsoft.com/en-us/windows/wsl/install-win10.
 ## Windows Store
 - Windows Terminal
 - Debian
+
+The [files for Windows Terminal](terminal/) must be copied manually.
 
 ## Notes
 

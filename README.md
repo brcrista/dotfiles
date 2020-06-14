@@ -11,8 +11,12 @@ This is my repository of configuration files.
 ./bootstrap
 ```
 
-### Other setup (macOS)
+## OS-specific setup
 
-Install [MacTeX](https://www.tug.org/mactex/mactex-download.html). Besides getting you LaTeX, this also lets you render Markdown as PDF with [`pandoc`](https://pandoc.org/).
+- [Debian](debian/)
+- [macOS](macos/)
+- [Windows](windows/)
 
-The files for VS Code and iTerm2 must be copied manually.
+## VS Code setup
+
+The [files for VS Code](vscode/) must be copied manually.
