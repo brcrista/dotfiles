@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: make install
-    - run: debian/install-apt-packages
+    - run: sudo debian/install-apt-packages
     - run: make installcheck
 
   macos:
