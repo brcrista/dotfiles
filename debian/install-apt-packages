@@ -5,5 +5,5 @@ packages=$(cat "$scriptdir/apt-packages.txt")
 
 for package in $packages
 do
-    apt install "$package"
+    apt-get install --yes "$package"
 done
