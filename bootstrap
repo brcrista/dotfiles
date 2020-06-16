@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
-# Do a full installation, from scratch
+# Do a full installation from scratch.
 set -e
 
-make install
+# make install
 
-if [[ $(uname) == 'Darwin' ]]
+if [[ -f /etc/os-release ]]
+then
+    os_id=$(grep -E "^ID=" /etc/os-release | sed -E "s/^ID=(.*)$/\\1/")
+    case "$os_id" in
+        'debian' | 'ubuntu')
+        sudo debian/install-apt-packages
+        ;;
+    esac
+elif [[ $(uname) == 'Darwin' ]]
 then
     make brew-cli
     make brew

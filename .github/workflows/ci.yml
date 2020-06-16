@@ -8,24 +8,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: lint 
+      - name: lint
         run: make lint
 
   linux:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - run: make install
+    - run: debian/install-apt-packages
     - run: make installcheck
 
   macos:
-    runs-on: macos-latest 
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - run: make install
 
     # The macOS environment should already have `brew` installed
-    - name: make brew 
+    - name: make brew
       run: |
         # Without this, `brew bundle` will fail on the Node.js preinstalled in the virtual environment
         brew unlink node@12
