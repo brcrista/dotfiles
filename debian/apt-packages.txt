@@ -1,4 +1,5 @@
 curl
+dos2unix
 git
 jq
 make
