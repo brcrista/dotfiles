@@ -17,5 +17,5 @@ then
     make brew-cli
     make brew
     make npm
-    make conda
+    make macos-conda
 fi

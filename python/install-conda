@@ -1,9 +1,24 @@
 #!/usr/bin/env sh
 set -e
+scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
+
+install_url="$1"
+if [ -z "$install_url"]
+then
+    this_file=$(basename "$0")
+    echo "Usage: $this_file [miniconda_download_url]" >&2
+    exit 1
+fi
 
 # Download conda
-install_script="$HOME/Downloads/install_miniconda.sh"
-curl -L https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -o "$install_script"
+downloads="$HOME/Downloads"
+if [ ! -d "$downloads" ]
+then
+    mkdir -p "$downloads"
+fi
+
+install_script="$downloads/install_miniconda.sh"
+curl -L "$install_url" -o "$install_script"
 chmod +x "$install_script"
 
 # Install conda
@@ -14,7 +29,7 @@ rm "$install_script"
 # Install Anaconda packages
 PATH="$conda_prefix/condabin:$PATH"
 conda install python --yes
-conda install --file anaconda-packages.txt --yes
+conda install --file "$scriptdir/anaconda-packages.txt" --yes
 
 # Add conda and packages to PATH
 conda init

@@ -33,5 +33,5 @@ jobs:
         make brew
 
     - run: make npm
-    - run: make conda
+    - run: make macos-conda
     - run: make installcheck
