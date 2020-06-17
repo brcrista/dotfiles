@@ -11,12 +11,14 @@ jobs:
       - name: lint
         run: make lint
 
+  # We could just run ./bootstrap, but running the targets individually will show each step in the logs.
   linux:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - run: make install
-    - run: make apt
+    - run: sudo make apt
+    - run: sudo make npm
     - run: make linux-conda
     - run: make installcheck
 
@@ -26,10 +28,10 @@ jobs:
     - uses: actions/checkout@v2
     - run: make install
 
-    # The macOS environment should already have `brew` installed
+    # The macOS environment should already have `brew` installed.
     - name: make brew
       run: |
-        # Without this, `brew bundle` will fail on the Node.js preinstalled in the virtual environment
+        # Without this, `brew bundle` will fail on the Node.js preinstalled in the virtual environment.
         brew unlink node@12
         make brew
 

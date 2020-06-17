@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Do a full installation from scratch.
+# Note: If you update this file, update .github/workflows/ci.yml also.
+
 set -e
 
 make install
@@ -9,7 +11,8 @@ then
     os_id=$(grep -E "^ID=" /etc/os-release | sed -E "s/^ID=(.*)$/\\1/")
     case "$os_id" in
         'debian' | 'ubuntu')
-        make apt
+        sudo make apt
+        sudo make npm
         make linux-conda
         ;;
     esac

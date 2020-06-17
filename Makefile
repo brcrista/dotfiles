@@ -20,7 +20,7 @@ uninstall:
 
 .PHONY: apt
 apt:
-	sudo debian/install-apt-packages
+	debian/install-apt-packages
 
 .PHONY: brew-cli
 brew-cli:
@@ -34,6 +34,7 @@ brew:
 
 .PHONY: npm
 npm:
+	npm install -g npm
 	npm install -g tldr
 
 .PHONY: linux-conda
