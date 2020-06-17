@@ -36,6 +36,10 @@ brew:
 npm:
 	npm install -g tldr
 
+.PHONY: linux-conda
+linux-conda:
+	python/install-conda "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+
 .PHONY: macos-conda
 macos-conda:
 	python/install-conda "https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
