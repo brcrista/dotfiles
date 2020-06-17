@@ -2,9 +2,9 @@
 # Do a full installation from scratch.
 set -e
 
-# make install
+make install
 
-if [[ -f /etc/os-release ]]
+if [ -f /etc/os-release ]
 then
     os_id=$(grep -E "^ID=" /etc/os-release | sed -E "s/^ID=(.*)$/\\1/")
     case "$os_id" in
