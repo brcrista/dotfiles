@@ -18,6 +18,10 @@ installcheck:
 uninstall:
 	.build/uninstall
 
+.PHONY: apt
+apt:
+	sudo debian/install-apt-packages
+
 .PHONY: brew-cli
 brew-cli:
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

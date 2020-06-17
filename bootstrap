@@ -9,7 +9,7 @@ then
     os_id=$(grep -E "^ID=" /etc/os-release | sed -E "s/^ID=(.*)$/\\1/")
     case "$os_id" in
         'debian' | 'ubuntu')
-        sudo debian/install-apt-packages
+        make apt
         ;;
     esac
 elif [[ $(uname) == 'Darwin' ]]
