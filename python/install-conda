@@ -1,9 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 scriptdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>&1 > /dev/null && pwd)
 
 install_url="$1"
-if [ -z "$install_url"]
+if [ -z "$install_url" ]
 then
     this_file=$(basename "$0")
     echo "Usage: $this_file [miniconda_download_url]" >&2
