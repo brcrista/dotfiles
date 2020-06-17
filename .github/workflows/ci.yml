@@ -17,6 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - run: make install
     - run: make apt
+    - run: make linux-conda
     - run: make installcheck
 
   macos:

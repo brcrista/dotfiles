@@ -10,6 +10,7 @@ then
     case "$os_id" in
         'debian' | 'ubuntu')
         make apt
+        make linux-conda
         ;;
     esac
 elif [[ $(uname) == 'Darwin' ]]
