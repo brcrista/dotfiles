@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# From https://docs.microsoft.com/dotnet/core/install/linux-debian
+set -e
+
+# Trust the Microsoft package signing key 
+wget "https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb"
+dpkg --install packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+# Install the .NET SDK
+apt-get update
+apt-get install apt-transport-https --yes
+apt-get install dotnet-sdk-3.1 --yes
