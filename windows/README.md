@@ -11,8 +11,7 @@ That way, I know I'm getting the latest version and which options I'm getting.
 - [Git](https://git-scm.com/download/win)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - [Node.js](https://nodejs.org/en/download/)
-- [PowerShell](https://github.com/PowerShell/PowerShell/releases)
-    - [PowerShell setup](../pwsh/)
+- [PowerShell](../pwsh/)
 
 Install to `C:\bin`:
 - [jq](https://stedolan.github.io/jq/download/)
