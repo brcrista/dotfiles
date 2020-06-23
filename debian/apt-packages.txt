@@ -1,7 +1,13 @@
+autoconf
+automake
+bison
 curl
 dos2unix
+flex
 git
+info
 jq
+m4
 make
 man-db
 nodejs
