@@ -10,8 +10,6 @@ jq
 m4
 make
 man-db
-nodejs
-npm
 shellcheck
 sqlite3
 tree
