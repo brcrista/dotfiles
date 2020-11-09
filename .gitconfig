@@ -5,6 +5,8 @@
 	user = brcrista
 [push]
 	default = simple
+[pull]
+	rebase = false
 [grep]
 	lineNumber = true
 	extendedRegexp = true
