@@ -30,6 +30,10 @@ fi
 shopt -s globstar
 shopt -s cdspell
 
+# This *should* be the default, but I've seen cases where it isn't.
+# This is what made all directories highlighted green in WSL.
+umask 0022
+
 # Aliases
 alias e="echo"
 alias ll="ls -lAh --color"
