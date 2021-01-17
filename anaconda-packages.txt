@@ -10,3 +10,4 @@ pandas
 pytest
 python-dateutil
 requests
+scipy
