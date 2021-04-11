@@ -29,12 +29,7 @@ jobs:
     - run: make install
 
     # The macOS environment should already have `brew` installed.
-    - name: make brew
-      run: |
-        # Without this, `brew bundle` will fail on the Node.js preinstalled in the virtual environment.
-        brew unlink node@12
-        make brew
-
+    - run: make brew
     - run: make npm
     - run: make macos-conda
     - run: make installcheck
