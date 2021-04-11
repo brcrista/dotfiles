@@ -4,7 +4,7 @@
 # but it makes it convenient for running shellcheck.
 # See also `make lint`.
 
-if [ "$(which brew)" ]
+if command -v brew > /dev/null
 then
     # macOS: from `brew install coreutils`
     homebrew_coreutils_path="$(brew --prefix)/opt/coreutils/libexec/gnubin"
