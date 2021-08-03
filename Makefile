@@ -24,7 +24,7 @@ apt:
 
 .PHONY: brew-cli
 brew-cli:
-	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	macos/install-brew
 
 .PHONY: brew
 brew:
