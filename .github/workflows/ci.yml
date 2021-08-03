@@ -1,15 +1,15 @@
 name: CI
 
-on: [push, workflow_dispatch]
+on: push
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt-get update
-      - run: sudo apt-get upgrade shellcheck
-      - run: make lint
+
+      - name: lint
+        run: make lint
 
   # We could just run ./bootstrap, but running the targets individually will show each step in the logs.
   linux:
