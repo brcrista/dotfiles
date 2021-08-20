@@ -4,6 +4,16 @@
 # but it makes it convenient for running shellcheck.
 # See also `make lint`.
 
+# Initialize the Homebrew environment.
+if command -v brew > /dev/null
+then
+    eval "$(brew shellenv)"
+# The Apple Silicon install location for Homebrew is not in PATH by default.
+elif command -v /opt/homebrew/bin/brew > /dev/null
+then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 if command -v brew > /dev/null
 then
     # macOS: from `brew install coreutils`
