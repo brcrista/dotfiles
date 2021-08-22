@@ -20,7 +20,7 @@ echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
 sudo chsh -s /opt/homebrew/bin/bash $USER
 ```
 
-### Common gotcha with Homebrew 
+### Common gotcha with Homebrew
 
 Check the output of something like `which -a bash`.
 If you see something like:
