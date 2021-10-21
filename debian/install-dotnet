@@ -11,4 +11,4 @@ rm packages-microsoft-prod.deb
 # Install the .NET SDK
 apt-get update
 apt-get install apt-transport-https --yes
-apt-get install dotnet-sdk-3.1 --yes
+apt-get install dotnet-sdk-5.0 --yes
