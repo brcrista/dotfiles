@@ -3,6 +3,7 @@
 :set shiftwidth=4
 :set number
 :set nocompatible
+:set nofixendofline
 
 :syntax on
 
