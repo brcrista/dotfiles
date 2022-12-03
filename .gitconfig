@@ -5,6 +5,7 @@
 	user = brcrista
 [push]
 	default = simple
+	autoSetupRemote = true
 [pull]
 	rebase = false
 [grep]
