@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# This won't work in GNU Make 3.81, which is what ships with macOS.
+# From https://brew.sh
 # shellcheck disable=SC2016
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-# After you install Homebrewk, it tells you to run something like this to add it to PATH.
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.bash_profile.plugins"
