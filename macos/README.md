@@ -2,9 +2,7 @@
 
 ## iTerm2 profile
 
-The [files for iTerm2](iterm2/) must be copied manually.
-
-To install a profile, copy its JSON file to `~/Library/Application\ Support/iTerm2/DynamicProfiles`.
+The profile configuration files for iTerm2 must be copied manually. See the [instructions](iterm2/README.md).
 
 ## Default shell
 
@@ -12,7 +10,7 @@ The default shell in macOS is `zsh`. To set it to `bash`:
 
 ```sh
 # This will show something like /opt/homebrew/bin/bash
-ls -a bash
+which -a bash
 
 # chsh requires shells to be declared in /etc/shells
 echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
@@ -40,4 +38,3 @@ Note that `.bash_profile` handles this already.
 ## MacTex
 
 Install [MacTeX](https://www.tug.org/mactex/mactex-download.html). Besides getting you LaTeX, this also lets you render Markdown as PDF with [`pandoc`](https://pandoc.org/).
-
