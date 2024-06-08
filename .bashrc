@@ -61,6 +61,10 @@ mcd() {
     pwd
 }
 
+py() {
+    python3 -c "from pprint import pprint; pprint($1)"
+}
+
 # pip settings
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
