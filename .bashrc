@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 #
 # The shebang line isn't necessary since this isn't executable,
 # but it makes it convenient for running shellcheck.
@@ -50,6 +50,7 @@ alias up7="cd ../../../../../../.."
 
 alias gita="git add --all"
 alias gitb="git branch --all"
+alias gitc="gita && git commit -m"
 alias gitd="git diff"
 alias gitdc="git diff --cached"
 alias gitl="git log --graph"
