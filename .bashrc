@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 #
 # The shebang line isn't necessary since this isn't executable,
 # but it makes it convenient for running shellcheck.
