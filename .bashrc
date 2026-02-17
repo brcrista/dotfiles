@@ -66,8 +66,9 @@ py() {
     python3 -c "from pprint import pprint; pprint($1)"
 }
 
-# pip settings
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# Environment variables
+export EDITOR="vim"
+export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
 
 # Put installation-specific configuration in .bashrc.plugins
 if [ -f .bashrc.plugins ]
