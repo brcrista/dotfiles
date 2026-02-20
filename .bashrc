@@ -13,6 +13,7 @@ then
     # Lack of such support is extremely rare, and such a case
     # would tend to support setf rather than setaf.
     color_prompt=yes
+    export COLORTERM=truecolor
 else
     color_prompt=
 fi

@@ -1,4 +1,5 @@
 .bash_profile
 .bashrc
-.vimrc
 .gitconfig
+.tmux
+.vimrc
